@@ -15,7 +15,7 @@ You can customize all the versions and packages in the *docker-compose.yaml* fil
 
 5. __Start:__ Build the docker containers
    ```
-   # Move to dir with docker-compose.yml
+   # Move to directory which includes docker-compose.yml file
    docker-compose up -d
    ```
 
