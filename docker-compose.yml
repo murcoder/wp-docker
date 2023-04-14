@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  wordpress:
+    image: wordpress:latest
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+    environment:
+      - WORDPRESS_DB_PASSWORD=password
+      - WORDPRESS_DB_USER=root
+      - WORDPRESS_DB_HOST=db:3306
+    volumes:
+      - ./your_wordpress_directory:/var/www/html
+  db:
+    image: mariadb:latest
+    restart: always
+    environment:
+        - MYSQL_ROOT_PASSWORD=password
+        - MYSQL_DATABASE=wordpress
+    volumes:
+      - ./db:/var/lib/mysql

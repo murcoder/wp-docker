@@ -1,0 +1,8 @@
+*.env
+mybb/
+mariadb/
+postgres/
+db
+.idea
+.DS_STORE
+html
